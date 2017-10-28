@@ -21,6 +21,24 @@ process.on('nuxt:build:done', (err) => {
   const server = app.listen(port);
 
   server.on('listening', () => {
+    // Remove any launches that are in the past
+    launchesService.find({
+      query: {
+        $sort: {
+          isonet: 1,
+        },
+      }
+    }).then((results) => {
+      results.data.forEach((result) => {
+        const today = moment().format();
+        const launchDate = moment(result.net, 'MMMMDDY').format();
+        
+        if (today > launchDate) {
+          launchesService.remove(result._id);
+        }
+      });
+    });
+
     // Grab raw launch data from 25 launches after the most recent launch
     launchesService.find({
       query: {
