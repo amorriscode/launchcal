@@ -1,57 +1,38 @@
-# launch-cal
+# LaunchCal
 
-> View upcoming space launch missions around the world.
+View upcoming space launch missions around the world.
 
 ## About
 
-This project uses [Feathers](http://feathersjs.com). An open source web framework for building modern real-time applications.
+LaunchCal grabs space launch data from [Launch Library](https://launchlibrary.net) and serves it to you in a beautiful way.
+
+It uses [Feathers](http://feathersjs.com) and [Nuxt](https://nuxtjs.org/). I chose to use these technologies because they are both new _and_ exciting. Feathers makes creating REST APIs a breeze, and Nuxt allows me to tickle my love for Vue while using server side rendering.
 
 ## Getting Started
 
-Getting up and running is as easy as 1, 2, 3.
+You can run LaunchCal on your own machine in a few simple steps.
 
-1. Make sure you have [NodeJS](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
-2. Install your dependencies
+1. Make sure you have [Node](https://nodejs.org) installed.
 
-    ```
-    cd path/to/launch-cal; npm install
-    ```
+2. Install your dependencies.
+```
+yarn install
+```
 
-3. Start your app
+3. Start the app!
+```
+yarn run dev
+```
 
-    ```
-    npm start
-    ```
+4. Navigate to LaunchCal (http://localhost:3030)
+
 
 ## Testing
 
 Simply run `npm test` and all your tests in the `test/` directory will be run.
 
-## Scaffolding
-
-Feathers has a powerful command line interface. Here are a few things it can do:
-
-```
-$ npm install -g feathers-cli             # Install Feathers CLI
-
-$ feathers generate service               # Generate a new Service
-$ feathers generate hook                  # Generate a new Hook
-$ feathers generate model                 # Generate a new Model
-$ feathers help                           # Show all commands
-```
-
-## Help
-
-For more information on all the things you can do with Feathers visit [docs.feathersjs.com](http://docs.feathersjs.com).
-
-## Changelog
-
-__0.1.0__
-
-- Initial release
-
 ## License
 
-Copyright (c) 2016
+Copyright (c) 2017
 
 Licensed under the [MIT license](LICENSE).
