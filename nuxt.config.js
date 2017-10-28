@@ -12,6 +12,7 @@ module.exports = {
     '@nuxtjs/font-awesome',
   ],
   axios: {
+    baseURL: 'http://localhost:3030/',
     browserBaseURL: '/',
   },
 };

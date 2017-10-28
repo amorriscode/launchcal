@@ -74,7 +74,7 @@ function errorHandler(error, ctx) {
 // Setup BaseURL
 const baseURL = process.browser
   ? (process.env.API_URL_BROWSER || '/')
-  : (process.env.API_URL || 'http://localhost:3000/api')
+  : (process.env.API_URL || 'http://localhost:3030/')
 
 // Custom init hook
 

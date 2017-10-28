@@ -1,6 +1,6 @@
 <template>
   <div class="launch-card">
-    <h3 class="title is-3">{{ launchDate }}</h3>
+    <h3 class="subtitle is-3">{{ launchDate }}</h3>
 
     <div class="card">
       <header class="card-header">
@@ -17,7 +17,7 @@
               </p>
 
               <p>
-                <strong>Primary Mission:</strong> 
+                <strong>Primary Mission: </strong>
                 <span v-if="launchData.missions[0]">{{ launchData.missions[0].name }}</span>
                 <span v-else>Unknown</span>
               </p>
@@ -81,5 +81,13 @@
 <style scoped>
   .launch-card {
     margin: 2.5rem;
+  }
+
+  .card-header {
+    background-image: linear-gradient(141deg,#1f191a,#363636 71%,#46403f);
+  }
+
+  .card-header-title {
+    color: white;
   }
 </style>
