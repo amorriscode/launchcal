@@ -6,4 +6,11 @@ module.exports = {
   },
   rootDir: path.resolve(__dirname),
   dev: process.env.NODE_ENV !== 'production',
+  modules: [
+    '@nuxtjs/bulma',
+    '@nuxtjs/axios',
+  ],
+  axios: {
+    browserBaseURL: '/',
+  },
 };

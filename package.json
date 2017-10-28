@@ -24,19 +24,21 @@
   "scripts": {
     "test": "npm run eslint && npm run mocha",
     "eslint": "eslint src/. test/. --config .eslintrc.json",
-    "start": "node src/",
+    "start": "NODE_ENV=production node src/",
     "mocha": "mocha test/ --recursive --exit",
     "build": "nuxt build",
     "dev": "DEBUG=nuxt:* nodemon --watch src/ --watch config/ src/index.js",
-    "prestart": "npm run build",
-    "start": "NODE_ENV=production node src/"
+    "prestart": "npm run build"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^4.4.0",
+    "@nuxtjs/bulma": "^1.0.3",
     "axios": "^0.17.0",
     "body-parser": "^1.18.2",
     "compression": "^1.7.1",
     "cors": "^2.8.4",
     "feathers": "^2.2.3",
+    "feathers-client": "^2.4.0",
     "feathers-configuration": "^0.4.2",
     "feathers-errors": "^2.9.2",
     "feathers-hooks": "^2.1.1",
@@ -56,8 +58,10 @@
   "devDependencies": {
     "eslint": "^4.9.0",
     "mocha": "^4.0.1",
+    "node-sass": "^4.5.3",
     "nodemon": "^1.12.1",
     "request": "^2.83.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.2",
+    "sass-loader": "^6.0.6"
   }
 }
