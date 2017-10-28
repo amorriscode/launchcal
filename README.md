@@ -30,6 +30,7 @@ yarn run dev
 ## TODOs
 
 - [ ] Infinite scroll and/or pagination
+- [ ] Schedule database updates
 
 ## License
 
