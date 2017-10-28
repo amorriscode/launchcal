@@ -27,9 +27,9 @@ yarn run dev
 4. Navigate to LaunchCal (http://localhost:3030)
 
 
-## Testing
+## TODOs
 
-Simply run `npm test` and all your tests in the `test/` directory will be run.
+- [ ] Infinite scroll and/or pagination
 
 ## License
 
