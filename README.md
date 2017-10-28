@@ -1,4 +1,4 @@
-# LaunchCal
+# LaunchCal :rocket:
 
 View upcoming space launch missions around the world.
 
