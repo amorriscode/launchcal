@@ -21,12 +21,6 @@ process.on('nuxt:build:done', (err) => {
   const server = app.listen(port);
 
   server.on('listening', () => {
-    // launchesService.find().then((results) => {
-    //   results.data.forEach((result) => {
-    //     launchesService.remove(result._id);
-    //   });
-    // });
-
     // Grab raw launch data from 25 launches after the most recent launch
     launchesService.find({
       query: {

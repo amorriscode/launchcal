@@ -1,15 +1,25 @@
 <template>
-  <div class="container">
-    <h1 class="title is-1">LaunchCal</h1>
+  <div>
+    <site-header></site-header>
 
-    <div v-if="launches">FUCKING LAUNCHES</div>
+    <div class="container">
+      <div v-if="launches">
+        <launch-card v-for="launch in launches.data" 
+                    :launch-data="launch" 
+                    :key="launch.id">
+        </launch-card>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
   import axios from 'axios';
+  import SiteHeader from '../components/site-header.vue';
+  import LaunchCard from '../components/launch-card.vue';
 
   export default {
+    components: { SiteHeader, LaunchCard },
     data() {
       return {
         launches: null,
@@ -20,7 +30,8 @@
     },
     methods: {
       async getLaunches() {
-        const launches = await this.$axios.$get('/launches');
+        // Get the ten launches closest to today
+        const launches = await this.$axios.$get('/launches?$sort[isonet]=1');
         
         this.launches = launches;
       }

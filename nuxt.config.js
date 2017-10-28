@@ -9,6 +9,7 @@ module.exports = {
   modules: [
     '@nuxtjs/bulma',
     '@nuxtjs/axios',
+    '@nuxtjs/font-awesome',
   ],
   axios: {
     browserBaseURL: '/',
